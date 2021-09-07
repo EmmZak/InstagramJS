@@ -1,0 +1,10 @@
+{
+    "login": "",
+    "password": "",
+    "tags": [
+        "detroit"
+    ],
+    "likesPerTag": 5,
+    "likeCommentsPerTag": 2,
+    "likeAgain": true
+}
