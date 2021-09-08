@@ -4,8 +4,6 @@ const BASE_URL = 'https://www.instagram.com';
 const insta = {
   browser: null,
   page: null,
-  //likesPerTag: null,
-  //likeCommentsPerTag: null,
 
   initialize: async (config) => {
     insta.browser = await puppeteer.launch({
@@ -28,6 +26,7 @@ const insta = {
   acceptCookies: async () => {
     const [button] = await insta.page.$x("//button[text()='Accept All']");
     await button.click();
+    insta.page.waitForTimeout(2000);
   },
 
   login: async (username, password) => {

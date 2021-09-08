@@ -1,13 +1,13 @@
 require('dotenv').config()
 
 const fs = require('fs')
-const insta = require('./insta');
+const insta = require('./src/insta');
 const login = process.env.INSTA_USERNAME;
 const password = process.env.INSTA_PASSWORD;
 
 (async () => {
     // parse config file
-    let rawData = fs.readFileSync('config.json');
+    let rawData = fs.readFileSync('config/config.json');
     let config = JSON.parse(rawData);
     console.log('config ', config);
     
